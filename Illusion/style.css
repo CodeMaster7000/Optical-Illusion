@@ -1,1 +1,45 @@
-
+body {
+			margin: 0;
+			padding: 0;
+		}
+		.square {
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -150px;
+			margin-left: -150px;
+			background-color: #000;
+			opacity: 0.8;
+			animation: rotate 4s linear infinite;
+		}
+		.dot {
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			top: calc(50% - 7.5px);
+			left: calc(50% - 7.5px);
+			background-color: #FFFFFF;
+			border-radius: 50%;
+			animation: expand 1.5s linear infinite;
+		}
+		@keyframes rotate {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes expand {
+			0% {
+				transform: scale(1);
+			}
+			50% {
+				transform: scale(2);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
